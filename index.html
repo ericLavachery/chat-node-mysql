@@ -50,8 +50,8 @@
             $('#hello').click(connectMe);
 
             // Quand on reçoit un message, on l'insère dans la page
-            socket.on('message', function(data) {
-                putMessage(data.pseudo, data.message);
+            socket.on('message', function(book) {
+                putMessage(book.pseudo, book.message);
             })
 
             // Ajoute un message dans la page
